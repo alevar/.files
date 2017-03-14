@@ -390,3 +390,14 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 set clipboard=unnamedplus
+
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
+if&term =~ '^screen'
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+                                
+nnoremap <C-c> :set hlsearch!<CR>
