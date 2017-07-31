@@ -42,6 +42,14 @@ map <leader>pp :setlocal paste!<cr>
 " toggle comment of a line/block
 nmap # <Plug>NERDCommenterInvert
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
 "==============================="
 "============COMMENTER=========="
 "==============================="
@@ -182,6 +190,9 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" new empty file
+map <C-n> :tabnew <c-r>=expand("%:p:h")<cr>/<cr>
 
 set clipboard=unnamedplus
 
