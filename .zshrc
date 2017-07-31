@@ -38,3 +38,5 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 pgrep 'tmux|startx' || startx
 #alias python=/usr/bin/python3
+export PATH="/home/sparrow/anaconda3/bin:$PATH"
+alias ls='ls --color=auto'

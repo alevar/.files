@@ -56,10 +56,12 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+t exec --no-startup-id  thunar
 
 # launch browser
-bindsym $mod+c exec --no-startup-id  sensible-browser
+bindsym $mod+c exec --no-startup-id opera --new-window
 
 # launch sublime
-# bindsym $mod+s exec subl
+#bindsym $mod+s exec subl
+# launch atom
+bindsym $mod+s exec xfce4-terminal -e vim
 
 # change focus
 bindsym $mod+j focus left
@@ -185,7 +187,7 @@ bindsym $mod+Shift+BackSpace exec "i3-nagbar -t warning -m 'Do you really want t
 # MultiScreen
 #
 # VGA left
-bindsym $mod+F8 exec xrandr --output VGA1 --auto --left-of eDP1
+bindsym $mod+F8 exec xrandr --output VGA-1 --auto --right-of eDP-1
 # VGA right
 #bindsym $mod+h exec --no-startup-id xrandr --output VGA1 --auto --right-of eDP1
 # HDMI left
@@ -195,3 +197,5 @@ bindsym $mod+F8 exec xrandr --output VGA1 --auto --left-of eDP1
 
 bindsym $mod+F4 exec dbus-send --type=method_call --print-reply=literal --system --dest='org.freedesktop.UPower' '/org/freedesktop/UPower/KbdBacklight' 'org.freedesktop.UPower.KbdBacklight.SetBrightness' "int32:3"
 bindsym $mod+F3 exec dbus-send --type=method_call --print-reply=literal --system --dest='org.freedesktop.UPower' '/org/freedesktop/UPower/KbdBacklight' 'org.freedesktop.UPower.KbdBacklight.SetBrightness' "int32:0"
+
+exec --no-startup-id nm-applet
