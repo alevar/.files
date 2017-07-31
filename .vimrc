@@ -185,7 +185,7 @@ vnoremap <S-Tab> <gv
 
 set clipboard=unnamedplus
 
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <F9> :!%:p<cr>
 
 if&term =~ '^screen'
     execute "set <xUp>=\e[1;*A"
