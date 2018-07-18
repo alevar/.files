@@ -38,5 +38,17 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 pgrep 'tmux|startx' || startx
 #alias python=/usr/bin/python3
-export PATH="/home/sparrow/anaconda3/bin:$PATH"
+export PATH="/home/sparrow/anaconda2/bin:$PATH"
+#alias conda='/home/sparrow/anaconda2/bin/conda'
+
 alias ls='ls --color=auto'
+alias sl='ls --color=auto'
+stty -ixon
+
+export LIBRARY_PATH="/usr/include/"
+export LD_LIBRARY_PATH="/usr/local/lib"
+export CPATH="/usr/include/"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
